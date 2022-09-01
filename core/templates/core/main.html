@@ -1,0 +1,40 @@
+{% extends 'base.html' %} {% load static %}
+<!---->
+{% block content %}
+
+<!--  Col Main-Content   -->
+<div
+  class="sm:grid sm:grid-cols-6 min-h-full items-stretch divide divide-black max-w-6xl mx-auto sm:my-0 px-4"
+>
+  <!-- Hero   -->
+  {% include './hero.html' %}
+
+  <!--  Quote  -->
+  <div class="bg-stone-4000 col-span-12 border-y py-12">
+    <div class="w-full">
+      <figure>
+        <blockquote class="book-quote text-zinc-700 text-step_0">
+          <p class="font-extralight whitespace-normal">
+            Reading is an act of civilization; it’s one of the greatest acts of
+            civilization because it takes the free raw material of the mind and
+            builds castles of possibilities.
+          </p>
+          <figcaption class="font-extralight">—Ben Okri</figcaption>
+        </blockquote>
+      </figure>
+    </div>
+  </div>
+
+  <!--    New  Arrivals  -->
+
+  <!--    New York Times Best Sellers   -->
+  <div class="bg-[#c0bcb9] col-span-12 py-7 flex items-center justify-center">
+    <h2 class="text-lg md:text-2xl">The New York Times Best Sellers</h2>
+  </div>
+
+  {% include './bestsellers.html' %}
+</div>
+
+<!-- /End replace -->
+
+{% endblock content %}

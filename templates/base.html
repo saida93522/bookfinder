@@ -1,0 +1,18 @@
+{% load static %}
+<html lang="en">
+  <head>
+    {% include 'head.html' %}
+  </head>
+  <body class="bg-main text-_step_1">
+    <!-- Header -->
+    {% include 'nav.html' %}
+    <main class="grid-container min-h-screen mx-auto pb-4">
+      <!-- Main Content -->
+      {% block content %} {% endblock content %}
+    </main>
+    <!-- Footer -->
+    {% include 'footer.html' %}
+    <!-- Scripts -->
+    {% include 'scripts.html' %}
+  </body>
+</html>

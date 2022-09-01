@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "InktrapPlain";
+  src: url("/static/fonts/PPNeueMachina-PlainRegular.otf") format("otf");
+}
+
+@font-face {
+  font-family: "InktrapReg";
+  src: url("/static/fonts/PPNeueMachina-InktrapRegular.otf") format("otf");
+}
+
+@font-face {
+  font-family: "InktrapUB";
+  src: url("/static/fonts/PPNeueMachina-InktrapUltrabold.otf") format("otf");
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  /* font-family: neue-haas-unica, sans-serif; */
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+}
+
+.hero-btn a {
+  width: clamp(3.87rem, calc(1.43rem + 12.18vw), 11.18rem);
+}
+
+.hero-btn .box {
+  width: clamp(1.08rem, calc(0.66rem + 2.11vw), 2.34rem);
+}
+
+.hero-btn .right-block {
+  width: clamp(0.75rem, calc(0.5rem + 1.25vw), 1.5rem);
+}
+
+blockquote p::before {
+  content: "\201C";
+}
+
+blockquote p::after {
+  content: "\201D";
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.btn-wrapper {
+  position: absolute;
+  top: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-wrapper .swiper-button {
+  z-index: 1;
+}
+
+@media screen and (max-width: 920px) {
+  .btn-wrapper {
+    position: absolute;
+    left: 0;
+    bottom: 30%;
+    justify-content: space-between;
+  }
+  .btn-wrapper .swiper-button {
+    z-index: 1;
+  }
+}
