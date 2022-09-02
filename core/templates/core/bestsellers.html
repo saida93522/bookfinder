@@ -1,5 +1,4 @@
-{% load static %}
-
+{% load static %} {% extends 'main.html' %} {% block content %}
 <!--    Hardcover Fiction    -->
 <div class="bg-[#c0bcb9] [DDDBDACC] col-span-12 h-72 pb-8 sm:h-full sm:py-12">
   <div class="px-4 sm:px-6 lg:px-8">
@@ -12,6 +11,7 @@
     <div class="swiper mySwiper">
       <!--   swiper wrapper    -->
       <ul class="swiper-wrapper">
+        {% for books in hardcover_fiction %}
         <li class="swiper-slide">
           <a href="#" class="block">
             <div class="">
@@ -27,13 +27,14 @@
               <p
                 class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4"
               >
-                Beach Read
+                {{books[0]}}
               </p>
 
-              <p class="pt-1 text-xs text-zinc-900">Emily Henry</p>
+              <p class="pt-1 text-xs text-zinc-900">{{books[1]}}</p>
             </div>
           </a>
         </li>
+        {% endfor %}
 
         <li class="swiper-slide">
           <a href="#" class="block">
@@ -787,3 +788,4 @@
     </div>
   </div>
 </div>
+{% endblock content %}

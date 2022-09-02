@@ -32,7 +32,92 @@
     <h2 class="text-lg md:text-2xl">The New York Times Best Sellers</h2>
   </div>
 
-  {% include './bestsellers.html' %}
+  <div class="bg-[#c0bcb9] [DDDBDACC] col-span-12 h-72 pb-8 sm:h-full sm:py-12">
+    <div class="px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h2
+          class="text-xl font-normal decoration-1 underline underline-offset-4"
+        >
+          Hardcover Fiction
+        </h2>
+      </div>
+      <!--       swiper     -->
+      <div class="swiper mySwiper">
+        <!--   swiper wrapper    -->
+        <ul class="swiper-wrapper">
+          {% for title , author in hardcover_fiction.items %}
+          <li class="swiper-slide">
+            <a href="#" class="block">
+              <div class="">
+                <img
+                  loading="lazy"
+                  alt="Smart Watch"
+                  class="object-cover h-40 sm:h-48 w-full block rounded-md"
+                  src="https://books.google.com/books/publisher/content?id=wIhhDwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U3f-Kun1XN62J0v1Xp1ajpxkGTf3g&w=700"
+                />
+              </div>
+
+              <div class="relative">
+                <p
+                  class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4"
+                >
+                  {{title}}
+                </p>
+
+                <p class="pt-1 text-xs text-zinc-900">{{author}}</p>
+              </div>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+        <!--  pagination -->
+        <div class="btn-wrapper w-full">
+          <div
+            class="bg-gray-8000 swiper-button swiper-prev-button sm:w-8 sm:h-8 rounded-full border border-stone-800"
+          >
+            <svg
+              class="w-5 sm:w-7 -rotate-180"
+              fill="none"
+              stroke="black"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              ></path>
+            </svg>
+          </div>
+          <div
+            class="swiper-button swiper-next-button sm:w-8 sm:h-8 rounded-full border border-stone-800"
+          >
+            <svg
+              class="w-5 sm:w-7"
+              fill="none"
+              stroke="black"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              ></path>
+            </svg>
+          </div>
+        </div>
+
+        <div
+          class="swiper-pagination relative bg-orange-3000 bottom-6 text-_step_2"
+        ></div>
+      </div>
+    </div>
+  </div>
+
+  {% comment %} {% include './bestsellers.html' %} {% endcomment %}
 </div>
 
 <!-- /End replace -->
