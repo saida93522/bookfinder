@@ -26,8 +26,8 @@ html {
 
 body {
   /* font-family: neue-haas-unica, sans-serif; */
-  font-family: "Inter", sans-serif;
-  font-style: normal;
+  /* font-family: "Inter", sans-serif; */
+  /* font-style: normal; */
 }
 
 .hero-btn a {
@@ -72,7 +72,7 @@ blockquote p::after {
 
 .btn-wrapper {
   position: absolute;
-  top: 40%;
+  top: 30%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -82,11 +82,11 @@ blockquote p::after {
   z-index: 1;
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 640px) {
   .btn-wrapper {
     position: absolute;
     left: 0;
-    bottom: 30%;
+    top: 0;
     justify-content: space-between;
   }
   .btn-wrapper .swiper-button {

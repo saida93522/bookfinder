@@ -4,22 +4,23 @@
 
 <!--  Col Main-Content   -->
 <div
-  class="sm:grid sm:grid-cols-6 min-h-full items-stretch divide divide-black max-w-6xl mx-auto sm:my-0 px-4"
+  class="sm:grid sm:grid-cols-6 items-center divide divide-black max-w-6xl mx-auto sm:my-0 px-4"
 >
   <!-- Hero   -->
   {% include './hero.html' %}
 
   <!--  Quote  -->
-  <div class="bg-stone-4000 col-span-12 border-y py-12">
-    <div class="w-full">
+
+  <div class="bg-stone-4000 col-span-12 py-12 border-y sm:px-4">
+    <div class="">
       <figure>
-        <blockquote class="book-quote text-zinc-700 text-step_0">
-          <p class="font-extralight whitespace-normal">
+        <blockquote class="book-quote text-zinc-800 text-step_1">
+          <p class="max-w-prose leading-relaxed font-inkUB">
             Reading is an act of civilization; it’s one of the greatest acts of
             civilization because it takes the free raw material of the mind and
             builds castles of possibilities.
           </p>
-          <figcaption class="font-extralight">—Ben Okri</figcaption>
+          <figcaption class="font-light">—Ben Okri</figcaption>
         </blockquote>
       </figure>
     </div>
@@ -28,43 +29,46 @@
   <!--    New  Arrivals  -->
 
   <!--    New York Times Best Sellers   -->
-  <div class="bg-[#c0bcb9] col-span-12 py-7 flex items-center justify-center">
-    <h2 class="text-lg md:text-2xl">The New York Times Best Sellers</h2>
+
+  <div
+    id="best"
+    class="bg-[#c0bcb9] col-span-12 flex items-centers justify-center"
+  >
+    <div class="pt-20">
+      <h2 class="text-step_0">The New York Times Best Sellers</h2>
+    </div>
   </div>
 
-  <div class="bg-[#c0bcb9] [DDDBDACC] col-span-12 h-72 pb-8 sm:h-full sm:py-12">
-    <div class="px-4 sm:px-6 lg:px-8">
+  {% for items in bestsellers %}
+  <div class="bg-[#c0bcb9] [DDDBDACC] col-span-12 px-4">
+    <div class="bg-amber-4000 h-72 sm:h-96 pt-6">
       <div class="text-center">
         <h2
-          class="text-xl font-normal decoration-1 underline underline-offset-4"
+          class="text-_step_1 font-normal decoration-1 underline underline-offset-4"
         >
-          Hardcover Fiction
+          {{items.list_name}}
         </h2>
       </div>
       <!--       swiper     -->
       <div class="swiper mySwiper">
         <!--   swiper wrapper    -->
-        <ul class="swiper-wrapper">
-          {% for title , author in hardcover_fiction.items %}
+        <ul class="swiper-wrapper h-full">
+          {% for book in items.books %}
           <li class="swiper-slide">
-            <a href="#" class="block">
+            <a href="#" class="block w-36 flex flex-col items-center">
               <div class="">
                 <img
                   loading="lazy"
-                  alt="Smart Watch"
-                  class="object-cover h-40 sm:h-48 w-full block rounded-md"
-                  src="https://books.google.com/books/publisher/content?id=wIhhDwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U3f-Kun1XN62J0v1Xp1ajpxkGTf3g&w=700"
+                  alt=""
+                  class="object-contain h-40 sm:h-48 w-36"
+                  src="{{book.book_image}}"
                 />
               </div>
 
-              <div class="relative">
-                <p
-                  class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4"
-                >
-                  {{title}}
-                </p>
+              <div class="pt-2 relative text-center text-zinc-900 text-_step_3">
+                <p class="capitalize font-medium">{{book.title|lower}}</p>
 
-                <p class="pt-1 text-xs text-zinc-900">{{author}}</p>
+                <p class="mt-1">{{book.author}}</p>
               </div>
             </a>
           </li>
@@ -73,10 +77,10 @@
         <!--  pagination -->
         <div class="btn-wrapper w-full">
           <div
-            class="bg-gray-8000 swiper-button swiper-prev-button sm:w-8 sm:h-8 rounded-full border border-stone-800"
+            class="bg-gray-8000 swiper-button swiper-prev-button sm:w-8 sm:h-8 rounded-full border border-stone-800 flex justify-center"
           >
             <svg
-              class="w-5 sm:w-7 -rotate-180"
+              class="w-5 sm:w-6 -rotate-180"
               fill="none"
               stroke="black"
               viewBox="0 0 24 24"
@@ -91,10 +95,10 @@
             </svg>
           </div>
           <div
-            class="swiper-button swiper-next-button sm:w-8 sm:h-8 rounded-full border border-stone-800"
+            class="swiper-button swiper-next-button sm:w-8 sm:h-8 rounded-full border border-stone-800 flex justify-center"
           >
             <svg
-              class="w-5 sm:w-7"
+              class="w-5 sm:w-6"
               fill="none"
               stroke="black"
               viewBox="0 0 24 24"
@@ -111,13 +115,20 @@
         </div>
 
         <div
-          class="swiper-pagination relative bg-orange-3000 bottom-6 text-_step_2"
+          class="swiper-pagination absolute bg-orange-3000 pt-2 h-0 inline-flex top-0 justify-center sm:justify-end text-_step_2 font-medium"
         ></div>
       </div>
     </div>
   </div>
+  {% endfor %}
 
-  {% comment %} {% include './bestsellers.html' %} {% endcomment %}
+  <div id="category" class="bg-[#c0bcb9] col-span-12 sm:py-12 px-4 mb-4">
+    <div class="text-step_0 font-medium text-stone-700">
+      <h1 class="decoration-1 underline underline-offset-4">
+        Explore books by category
+      </h1>
+    </div>
+  </div>
 </div>
 
 <!-- /End replace -->

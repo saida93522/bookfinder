@@ -20,6 +20,7 @@ module.exports = {
         inkUB: ["InktrapUB"],
       },
       fontSize: {
+        _step_4: ["clamp(0.36rem, calc(0.28rem + 0.42vw), 0.61rem)"],
         _step_3: ["clamp(0.43rem, calc(0.32rem + 0.56vw), 0.77rem)"],
         _step_2: ["clamp(0.52rem, calc(0.37rem + 0.73vw), 0.96rem)"],
         _step_1: ["clamp(0.63rem, calc(0.43rem + 0.96vw), 1.2rem)"],
