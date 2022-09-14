@@ -17,7 +17,8 @@ body {
 .title,
 .quote-title,
 .nyt-title,
-.sec-title {
+.sec-title,
+.nav-links a {
   font-family: "Syne", sans-serif;
 }
 
@@ -66,9 +67,6 @@ blockquote p::after {
   -webkit-justify-content: center;
   justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
 }
 
 .swiper-slide .box {

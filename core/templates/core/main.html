@@ -2,8 +2,6 @@
 <!---->
 {% block content %}
 
-<!--   Main-Content   -->
-
 <!-- Hero   -->
 {% include './hero.html' %}
 
@@ -18,7 +16,7 @@
       <h2 class="nyt-title text-step_2">The New York Times Best Sellers</h2>
     </div>
     {% for items in bestsellers %}
-    <article class="h-72 sm:h-[30rem] bg-stone-3000 mb-12">
+    <article class="my-4 h-max">
       <div class="relative mx-auto text-center">
         <span
           class="absolute inset-x-0 h-px -translate-y-1/2 bg-black/10 top-1/2"
@@ -29,10 +27,10 @@
       </div>
 
       <!--  Swipper -->
-      <div class="swiper mb-8">
+      <div class="swiper">
         <ul class="swiper-wrapper">
           {% for book in items.books %}
-          <li class="swiper-slide bg-stone-3000">
+          <li class="swiper-slide py-6 sm:py-8">
             <a href="#" class="block flex flex-col items-center">
               <div class="bg-[#EFEEE8] border border-[#EAE8DF md:h-48">
                 <img
@@ -44,11 +42,7 @@
               </div>
 
               <div class="relative pt-1 text-_step_3 text-center w-2/3">
-                <p
-                  class="capitalize text-[#111] group-hover:underline group-hover:underline-offset-4"
-                >
-                  {{book.title|lower}}
-                </p>
+                <p class="capitalize text-[#111]">{{book.title|lower}}</p>
                 <p class="mt-1 text-[#888]">{{book.author}}</p>
               </div>
             </a>
@@ -57,10 +51,9 @@
         </ul>
 
         <!--  pagination -->
-
         <div class="btn-wrapper w-full">
           <div
-            class="bg-gray-8000 swiper-button swiper-prev-button sm:w-6 sm:h-6 rounded-full border border-stone-800 flex justify-center"
+            class="swiper-button swiper-prev-button sm:w-6 sm:h-6 rounded-full border border-stone-800 flex justify-center"
           >
             <svg
               class="w-4 sm:w-5 -rotate-180"
@@ -97,22 +90,30 @@
           </div>
         </div>
 
-        <div
-          class="swiper-pagination h-0 inline-flex items-end justify-center text-_step_3 font-medium"
-        ></div>
+        <div class="swiper-pagination text-_step_3 font-medium"></div>
       </div>
     </article>
     {% endfor %}
   </div>
 </section>
-
+z
 <section id="category" class="bg-[#EDECE6] border-b">
   <div class="px-4 py-16 mx-auto max-w-6xl sm:px-6 lg:px-8">
     <div class="text-center">
-      <h2
-        class="text-step_2 relative inline-block px-4 text-center sec-title underline decoration-wavy decoration-[#74642F] underline-offset-[0.5rem] decoration-2"
-      >
+      <h2 class="text-step_2 relative inline-block px-4 text-center sec-title">
         Explore books by Catagories
+        <svg
+          class="mx-auto text-center h-1"
+          viewBox="0 0 48 7"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1 1C1 1 4.36355 6 7.57143 6C10.7793 6 10.935 1 14.1429 1C17.3507 1 17.5064 6 20.7143 6C23.9222 6 24.0778 1 27.2857 1C30.4936 1 30.6493 6 33.8571 6C37.065 6 37.2207 1 40.4286 1C43.6365 1 47 6 47 6"
+            stroke="#74642F"
+            stroke-width="2"
+          />
+        </svg>
       </h2>
     </div>
   </div>
