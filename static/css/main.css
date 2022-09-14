@@ -1,23 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@font-face {
-  font-family: "InktrapPlain";
-  src: url("/static/fonts/PPNeueMachina-PlainRegular.otf") format("otf");
-}
-
-@font-face {
-  font-family: "InktrapReg";
-  src: url("/static/fonts/PPNeueMachina-InktrapRegular.otf") format("otf");
-}
-
-@font-face {
-  font-family: "InktrapUB";
-  src: url("/static/fonts/PPNeueMachina-InktrapUltrabold.otf") format("otf");
-}
 
 html {
   -webkit-font-smoothing: antialiased;
@@ -25,9 +11,24 @@ html {
 }
 
 body {
-  /* font-family: neue-haas-unica, sans-serif; */
-  /* font-family: "Inter", sans-serif; */
-  /* font-style: normal; */
+  font-family: "Inter", sans-serif;
+}
+
+.title,
+.quote-title,
+.nyt-title,
+.sec-title {
+  font-family: "Syne", sans-serif;
+}
+
+.quote-title,
+.nyt-title,
+.sec-title {
+  margin-bottom: 1.5rem;
+}
+
+.nav-links a:hover {
+  color: #74642f;
 }
 
 .hero-btn a {
@@ -70,6 +71,11 @@ blockquote p::after {
   align-items: center;
 }
 
+.swiper-slide .box {
+  background: #efeee8;
+  border: 1px solid #eae8df;
+}
+
 .btn-wrapper {
   position: absolute;
   top: 30%;
@@ -80,16 +86,4 @@ blockquote p::after {
 
 .btn-wrapper .swiper-button {
   z-index: 1;
-}
-
-@media screen and (max-width: 640px) {
-  .btn-wrapper {
-    position: absolute;
-    left: 0;
-    top: 0;
-    justify-content: space-between;
-  }
-  .btn-wrapper .swiper-button {
-    z-index: 1;
-  }
 }

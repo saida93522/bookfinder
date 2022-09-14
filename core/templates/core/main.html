@@ -2,85 +2,68 @@
 <!---->
 {% block content %}
 
-<!--  Col Main-Content   -->
-<div
-  class="sm:grid sm:grid-cols-6 items-center divide divide-black max-w-6xl mx-auto sm:my-0 px-4"
->
-  <!-- Hero   -->
-  {% include './hero.html' %}
+<!--   Main-Content   -->
 
-  <!--  Quote  -->
+<!-- Hero   -->
+{% include './hero.html' %}
 
-  <div class="bg-stone-4000 col-span-12 py-12 border-y sm:px-4">
-    <div class="">
-      <figure>
-        <blockquote class="book-quote text-zinc-800 text-step_1">
-          <p class="max-w-prose leading-relaxed font-inkUB">
-            Reading is an act of civilization; it’s one of the greatest acts of
-            civilization because it takes the free raw material of the mind and
-            builds castles of possibilities.
-          </p>
-          <figcaption class="font-light">—Ben Okri</figcaption>
-        </blockquote>
-      </figure>
+<!--  Quote  -->
+
+{% include './quotes.html' %}
+
+<!--    New York Times Best Sellers   -->
+<section id="best" class="bg-[#EDECE6]0 border-b">
+  <div class="px-4 py-16 mx-auto max-w-6xl sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h2 class="nyt-title text-step_2">The New York Times Best Sellers</h2>
     </div>
-  </div>
-
-  <!--    New  Arrivals  -->
-
-  <!--    New York Times Best Sellers   -->
-
-  <div
-    id="best"
-    class="bg-[#c0bcb9] col-span-12 flex items-centers justify-center"
-  >
-    <div class="pt-20">
-      <h2 class="text-step_0">The New York Times Best Sellers</h2>
-    </div>
-  </div>
-
-  {% for items in bestsellers %}
-  <div class="bg-[#c0bcb9] [DDDBDACC] col-span-12 px-4">
-    <div class="bg-amber-4000 h-72 sm:h-96 pt-6">
-      <div class="text-center">
-        <h2
-          class="text-_step_1 font-normal decoration-1 underline underline-offset-4"
-        >
+    {% for items in bestsellers %}
+    <article class="h-72 sm:h-[30rem] bg-stone-3000 mb-12">
+      <div class="relative mx-auto text-center">
+        <span
+          class="absolute inset-x-0 h-px -translate-y-1/2 bg-black/10 top-1/2"
+        ></span>
+        <h3 class="relative inline-block px-4 text-center bg-[#F3F2EC]">
           {{items.list_name}}
-        </h2>
+        </h3>
       </div>
-      <!--       swiper     -->
-      <div class="swiper mySwiper">
-        <!--   swiper wrapper    -->
-        <ul class="swiper-wrapper h-full">
+
+      <!--  Swipper -->
+      <div class="swiper mb-8">
+        <ul class="swiper-wrapper">
           {% for book in items.books %}
-          <li class="swiper-slide">
-            <a href="#" class="block w-36 flex flex-col items-center">
-              <div class="">
+          <li class="swiper-slide bg-stone-3000">
+            <a href="#" class="block flex flex-col items-center">
+              <div class="bg-[#EFEEE8] border border-[#EAE8DF md:h-48">
                 <img
                   loading="lazy"
-                  alt=""
-                  class="object-contain h-40 sm:h-48 w-36"
+                  alt="book cover"
+                  class="object-cover object-center h-32 sm:min-h-full w-full"
                   src="{{book.book_image}}"
                 />
               </div>
 
-              <div class="pt-2 relative text-center text-zinc-900 text-_step_3">
-                <p class="capitalize font-medium">{{book.title|lower}}</p>
-
-                <p class="mt-1">{{book.author}}</p>
+              <div class="relative pt-1 text-_step_3 text-center w-2/3">
+                <p
+                  class="capitalize text-[#111] group-hover:underline group-hover:underline-offset-4"
+                >
+                  {{book.title|lower}}
+                </p>
+                <p class="mt-1 text-[#888]">{{book.author}}</p>
               </div>
             </a>
           </li>
           {% endfor %}
         </ul>
+
         <!--  pagination -->
+
         <div class="btn-wrapper w-full">
           <div
-            class="bg-gray-8000 swiper-button swiper-prev-button sm:w-8 sm:h-8 rounded-full border border-stone-800 flex justify-center"
+            class="bg-gray-8000 swiper-button swiper-prev-button sm:w-6 sm:h-6 rounded-full border border-stone-800 flex justify-center"
           >
             <svg
-              class="w-5 sm:w-6 -rotate-180"
+              class="w-4 sm:w-5 -rotate-180"
               fill="none"
               stroke="black"
               viewBox="0 0 24 24"
@@ -89,16 +72,16 @@
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                stroke-width="1.5"
+                stroke-width="1"
                 d="M17 8l4 4m0 0l-4 4m4-4H3"
               ></path>
             </svg>
           </div>
           <div
-            class="swiper-button swiper-next-button sm:w-8 sm:h-8 rounded-full border border-stone-800 flex justify-center"
+            class="swiper-button swiper-next-button sm:w-6 sm:h-6 rounded-full border border-stone-800 flex justify-center"
           >
             <svg
-              class="w-5 sm:w-6"
+              class="w-4 sm:w-5"
               fill="none"
               stroke="black"
               viewBox="0 0 24 24"
@@ -107,7 +90,7 @@
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                stroke-width="1.2"
+                stroke-width="1"
                 d="M17 8l4 4m0 0l-4 4m4-4H3"
               ></path>
             </svg>
@@ -115,21 +98,25 @@
         </div>
 
         <div
-          class="swiper-pagination absolute bg-orange-3000 pt-2 h-0 inline-flex top-0 justify-center sm:justify-end text-_step_2 font-medium"
+          class="swiper-pagination h-0 inline-flex items-end justify-center text-_step_3 font-medium"
         ></div>
       </div>
-    </div>
+    </article>
+    {% endfor %}
   </div>
-  {% endfor %}
+</section>
 
-  <div id="category" class="bg-[#c0bcb9] col-span-12 sm:py-12 px-4 mb-4">
-    <div class="text-step_0 font-medium text-stone-700">
-      <h1 class="decoration-1 underline underline-offset-4">
-        Explore books by category
-      </h1>
+<section id="category" class="bg-[#EDECE6] border-b">
+  <div class="px-4 py-16 mx-auto max-w-6xl sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h2
+        class="text-step_2 relative inline-block px-4 text-center sec-title underline decoration-wavy decoration-[#74642F] underline-offset-[0.5rem] decoration-2"
+      >
+        Explore books by Catagories
+      </h2>
     </div>
   </div>
-</div>
+</section>
 
 <!-- /End replace -->
 

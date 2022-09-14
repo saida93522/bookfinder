@@ -9,15 +9,11 @@ module.exports = {
     extend: {
       colors: {
         main: "#D3CFCF",
+        sec_main: "#F3F2EC",
         mustard: "#DAAA63",
         lightBean: "#B2ACAC",
         grayBrown: "#918989",
         myStone: "#333232",
-      },
-      fontFamily: {
-        inkPlain: ["InktrapPlain"],
-        inkReg: ["InktrapReg"],
-        inkUB: ["InktrapUB"],
       },
       fontSize: {
         _step_4: ["clamp(0.36rem, calc(0.28rem + 0.42vw), 0.61rem)"],

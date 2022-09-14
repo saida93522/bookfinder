@@ -1,7 +1,11 @@
+{% comment %}
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+{% endcomment %}
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
-  new Swiper(".mySwiper", {
+  new Swiper(".swiper", {
     loop: true,
+    spaceBetween: 2,
     pagination: {
       el: ".swiper-pagination",
       type: "fraction",

@@ -1,14 +1,16 @@
 {% load static %}
 <!-- Header -->
-<header class="bg-[#D3CFCF] min-w-full fixed top-0 z-10 border-b border-black">
-  <div class="hero sm:grid sm:grid-rows-1 max-w-6xl mx-auto px-4">
-    <nav class="flex items-end justify-between">
-      <a class="text-step_2 inline-flex self-end pb-0" href="/">
+
+<header class="border-b fixed min-w-full bg-sec_main z-10 pt-4">
+  <div class="px-4 mx-auto max-w-6xl sm:px-6 lg:px-8">
+    <div class="pb-0 flex items-end justify-between space-x-4 lg:space-x-10">
+      <a
+        class="flex lg:w-0 lg:flex-1 logo text-step_2 inline-flex self-end pb-0"
+        href="/"
+      >
         <svg
-          class=""
-          width="80"
-          height="64"
-          viewBox="4 0 80 42"
+          class="w-1/6 h-auto"
+          viewBox="4 0 80 52"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -21,7 +23,7 @@
             y="25"
             width="77"
             height="15"
-            fill="#D3CFCF"
+            fill="#F3F2EC"
             style="mix-blend-mode: luminosity"
           />
           <path
@@ -30,18 +32,52 @@
           />
         </svg>
       </a>
-      <ul class="hidden sm:flex items-end space-x-4 text-neutral-900">
-        <span class="inline-block w-px h-[90px] bg-zinc-7000 rounded-lg"></span>
-        <li><a class="text-_step_2" href="/">Home</a></li>
-        <span class="inline-block w-px h-[90px] bg-zinc-7000 rounded-lg"></span>
-        <li><a class="text-_step_2" href="#best">Best</a></li>
-        <span class="inline-block w-px h-[90px] bg-zinc-7000 rounded-lg"></span>
+
+      <ul
+        class="hidden text-[#111111] font-[4000] sm:space-x-2 md:flex items-center justify-between nav-links"
+      >
+        <li><a class="text-_step_2" href="#best">BestSeller</a></li>
+
         <li><a class="text-_step_2" href="#category">Category</a></li>
-        <span class="inline-block w-px h-[90px] bg-zinc-7000 rounded-lg"></span>
+        <li><a class="text-_step_2" href="#search">Search</a></li>
       </ul>
-      <a class="inline-flex items-center" href="#"
-        ><i class="bx bx-search text-step_1"></i
-      ></a>
-    </nav>
+
+      <div class="items-center justify-end flex-1 hidden space-x-4 md:flex">
+        <a
+          class="px-4 py-2 text-[#111111] sm:text-_step_2 border border-[#E0E0E0] font-medium rounded-sm"
+          href=""
+        >
+          Log in
+        </a>
+
+        <a
+          class="px-4 py-2 sm:text-_step_2 font-medium text-[#E5E5E5] bg-[#74642F] rounded-sm"
+          href=""
+        >
+          Sign up
+        </a>
+      </div>
+
+      <div class="md:hidden">
+        <button class="p-2 text-gray-600 bg-stone-400 rounded-lg" type="button">
+          <span class="sr-only">Open menu</span>
+          <svg
+            aria-hidden="true"
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewbox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 6h16M4 12h16M4 18h16"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
 </header>
