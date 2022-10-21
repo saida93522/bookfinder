@@ -96,15 +96,16 @@
     {% endfor %}
   </div>
 </section>
-z
+
 <section id="category" class="bg-[#EDECE6] border-b">
   <div class="px-4 py-16 mx-auto max-w-6xl sm:px-6 lg:px-8">
-    <div class="text-center">
+    <div class="text-center pb-12">
       <h2 class="text-step_2 relative inline-block px-4 text-center sec-title">
         Explore books by Catagories
         <svg
-          class="mx-auto text-center h-1"
+          class="mx-auto text-center h-2 bg-gray-4000"
           viewBox="0 0 48 7"
+          width="100"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -115,6 +116,142 @@ z
           />
         </svg>
       </h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:items-start">
+      <!-- filter -->
+      <div class="lg:sticky lg:top-4">
+        <details open class="overflow-hidden">
+          <summary
+            class="flex items-center justify-between bg-[#74642F] opacity-75 px-5 py-3 lg:hidden rounded-md"
+          >
+            <span class="text-_step_1 font-bold"> Genres </span>
+
+            <svg
+              class="h-5 w-5"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </summary>
+          <nav
+            aria-label="Main Nav"
+            class="px-5 flex flex-col space-y-1 text-zinc-700 font-medium text-_step_2"
+          >
+            <a href="" class="block hvr-underline-from-left py-2">
+              Adventure
+            </a>
+
+            <a href="" class="hvr-underline-from-left py-2"> Fantasy </a>
+
+            <a href="" class="hvr-underline-from-left py-2"> Fiction </a>
+
+            <a href="" class="hvr-underline-from-left py-2"> Non-Fiction </a>
+
+            <a href="" class="hvr-underline-from-left py-2"> History </a>
+          </nav>
+        </details>
+      </div>
+      <!-- books -->
+      <div class="lg:col-span-3">
+        <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="col-start-1 col-end-7">
+            <div class="flex justify-between flex-wrap ml-2">
+              <a
+                href="#"
+                class="relative bg-[#F3F2EC] px-7 py-4 mb-2 rounded-sm"
+              >
+                <img
+                  loading="lazy"
+                  alt=""
+                  class="object-cover h-32 sm:h-48 w-full"
+                  src="https://books.google.com/books/publisher/content?id=wIhhDwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U3f-Kun1XN62J0v1Xp1ajpxkGTf3g&w=700"
+                />
+
+                <div class="relative pt-1">
+                  <p
+                    class="text-_step_2 text-zinc-900 group-hover:underline group-hover:underline-offset-4"
+                  >
+                    Beach Read
+                  </p>
+                  <p class="mt-1 text-_step_3 text-zinc-700">Emily Henry</p>
+                </div>
+              </a>
+
+              <a
+                href="#"
+                class="relative bg-[#F3F2EC] px-7 py-4 mb-2 rounded-sm"
+              >
+                <img
+                  loading="lazy"
+                  alt=""
+                  class="object-cover h-32 sm:h-48 w-full"
+                  src="https://books.google.com/books/publisher/content?id=wIhhDwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U3f-Kun1XN62J0v1Xp1ajpxkGTf3g&w=700"
+                />
+
+                <div class="relative pt-1">
+                  <p
+                    class="text-_step_2 text-zinc-900 group-hover:underline group-hover:underline-offset-4"
+                  >
+                    Beach Read
+                  </p>
+                  <p class="mt-1 text-_step_3 text-zinc-700">Emily Henry</p>
+                </div>
+              </a>
+
+              <a
+                href="#"
+                class="relative h-full bg-[#F3F2EC] px-7 py-4 mb-2 rounded-sm"
+              >
+                <img
+                  loading="lazy"
+                  alt=""
+                  class="object-cover h-32 sm:h-48 w-full"
+                  src="https://books.google.com/books/publisher/content?id=wIhhDwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U3f-Kun1XN62J0v1Xp1ajpxkGTf3g&w=700"
+                />
+
+                <div class="relative pt-1">
+                  <p
+                    class="text-_step_2 text-zinc-900 group-hover:underline group-hover:underline-offset-4"
+                  >
+                    Beach Read
+                  </p>
+                  <p class="mt-1 text-_step_3 text-zinc-700">Emily Henry</p>
+                </div>
+              </a>
+
+              <a
+                href="#"
+                class="relative bg-[#F3F2EC] px-7 py-4 mb-2 rounded-sm"
+              >
+                <img
+                  loading="lazy"
+                  alt=""
+                  class="object-cover h-32 sm:h-48 w-full"
+                  src="https://books.google.com/books/publisher/content?id=wIhhDwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U3f-Kun1XN62J0v1Xp1ajpxkGTf3g&w=700"
+                />
+
+                <div class="relative pt-1">
+                  <p
+                    class="text-_step_2 text-zinc-900 group-hover:underline group-hover:underline-offset-4"
+                  >
+                    Beach Read
+                  </p>
+                  <p class="mt-1 text-_step_3 text-zinc-700">Emily Henry</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
