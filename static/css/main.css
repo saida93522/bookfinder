@@ -88,17 +88,16 @@ blockquote p::after {
 
 /* Category nav */
 
-.hvr-underline-from-left {
+.underline-effect {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   position: relative;
-  background-color: gold;
 }
 
-.hvr-underline-from-left:before {
+.underline-effect:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -114,8 +113,8 @@ blockquote p::after {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-.hvr-underline-from-left:hover:before,
-.hvr-underline-from-left:focus:before,
-.hvr-underline-from-left:active:before {
+.underline-effect:hover:before,
+.underline-effect:focus:before,
+.underline-effect:active:before {
   right: 70%;
 }
