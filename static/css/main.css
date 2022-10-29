@@ -52,11 +52,6 @@ blockquote p::after {
   content: "\201D";
 }
 
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
 .swiper-slide {
   display: -webkit-box;
   display: -ms-flexbox;
