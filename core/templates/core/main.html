@@ -117,15 +117,14 @@
         </svg>
       </h2>
     </div>
-
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:items-start">
       <!-- filter -->
       <div class="lg:sticky lg:top-4">
-        <details open class="overflow-hidden">
+        <details open class="overflow-hidden rounded border-r border-gray-200">
           <summary
-            class="flex items-center justify-between bg-[#74642F] opacity-75 px-5 py-3 lg:hidden rounded-md"
+            class="flex items-center justify-between bg-gray-100 px-5 py-3 lg:hidden"
           >
-            <span class="text-_step_1 font-bold"> Genres </span>
+            <span class="text-sm font-medium"> Genres </span>
 
             <svg
               class="h-5 w-5"
@@ -144,9 +143,9 @@
           </summary>
           <nav
             aria-label="Main Nav"
-            class="px-5 flex flex-col space-y-1 text-zinc-700 font-medium text-_step_2"
+            class="px-5 flex flex-col space-y-1 text-gray-700 font-medium text-sm"
           >
-            <a href="" class="block underline-effect py-2"> Adventure </a>
+            <a href="" class="underline-effect py-2"> Adventure </a>
 
             <a href="" class="underline-effect py-2"> Fantasy </a>
 
@@ -154,98 +153,135 @@
 
             <a href="" class="underline-effect py-2"> Non-Fiction </a>
 
-            <a href="" class="underline-effect py-2"> History </a>
+            <a href="" class="block underline-effect py-2"> History </a>
           </nav>
         </details>
       </div>
       <!-- books -->
       <div class="lg:col-span-3">
-        <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          <div class="col-start-1 col-end-7">
-            <div class="flex justify-between flex-wrap ml-2">
-              <a
-                href="#"
-                class="relative bg-[#F3F2EC] px-7 py-4 mb-2 rounded-sm"
-              >
-                <img
-                  loading="lazy"
-                  alt=""
-                  class="object-cover h-32 sm:h-48 w-full"
-                  src="https://books.google.com/books/publisher/content?id=wIhhDwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U3f-Kun1XN62J0v1Xp1ajpxkGTf3g&w=700"
-                />
+        <div class="mt-4">
+          <div class="col-start-1 col-end-8">
+            <div class="swiper">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <a href="#" class="relative block h-full px-7 py-4 mb-2">
+                    <div class="">
+                      <img
+                        loading="lazy"
+                        alt=""
+                        class="object-cover h-32 sm:h-48 w-full block rounded-md"
+                        src="https://books.google.com/books/publisher/content?id=wIhhDwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U3f-Kun1XN62J0v1Xp1ajpxkGTf3g&w=700"
+                      />
+                    </div>
+                    <div class="relative pt-1">
+                      <p
+                        class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4"
+                      >
+                        Beach Read
+                      </p>
+                      <p class="mt-1 text-xs text-zinc-900">Emily Henry</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#" class="relative block h-full px-7 py-4 mb-2">
+                    <div class="">
+                      <img
+                        loading="lazy"
+                        alt=""
+                        class="object-cover h-32 sm:h-48 w-full block rounded-md"
+                        src="https://books.google.com/books/publisher/content?id=wIhhDwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U3f-Kun1XN62J0v1Xp1ajpxkGTf3g&w=700"
+                      />
+                    </div>
+                    <div class="relative pt-1">
+                      <p
+                        class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4"
+                      >
+                        Beach Read
+                      </p>
+                      <p class="mt-1 text-xs text-zinc-900">Emily Henry</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#" class="relative block h-full px-7 py-4 mb-2">
+                    <div class="">
+                      <img
+                        loading="lazy"
+                        alt=""
+                        class="object-cover h-32 sm:h-48 w-full block rounded-md"
+                        src="https://books.google.com/books/publisher/content?id=wIhhDwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U3f-Kun1XN62J0v1Xp1ajpxkGTf3g&w=700"
+                      />
+                    </div>
+                    <div class="relative pt-1">
+                      <p
+                        class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4"
+                      >
+                        Beach Read
+                      </p>
+                      <p class="mt-1 text-xs text-zinc-900">Emily Henry</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#" class="relative block h-full px-7 py-4 mb-2">
+                    <img
+                      loading="lazy"
+                      alt=""
+                      class="object-cover h-32 sm:h-48 w-full block rounded-md"
+                      src="https://books.google.com/books/publisher/content?id=wIhhDwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U3f-Kun1XN62J0v1Xp1ajpxkGTf3g&w=700"
+                    />
 
-                <div class="relative pt-1">
-                  <p
-                    class="text-_step_2 text-zinc-900 group-hover:underline group-hover:underline-offset-4"
+                    <div class="relative pt-1">
+                      <p
+                        class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4"
+                      >
+                        Beach Read
+                      </p>
+                      <p class="mt-1 text-xs text-zinc-900">Emily Henry</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <!--  pagination -->
+              <div class="btn-wrapper w-full">
+                <div
+                  class="bg-gray-8000 swiper-button swiper-prev-button sm:w-6 sm:h-6 rounded-full border border-stone-800 flex justify-center"
+                >
+                  <svg
+                    class="w-4 sm:w-5 -rotate-180"
+                    fill="none"
+                    stroke="black"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    Beach Read
-                  </p>
-                  <p class="mt-1 text-_step_3 text-zinc-700">Emily Henry</p>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    ></path>
+                  </svg>
                 </div>
-              </a>
-
-              <a
-                href="#"
-                class="relative bg-[#F3F2EC] px-7 py-4 mb-2 rounded-sm"
-              >
-                <img
-                  loading="lazy"
-                  alt=""
-                  class="object-cover h-32 sm:h-48 w-full"
-                  src="https://books.google.com/books/publisher/content?id=wIhhDwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U3f-Kun1XN62J0v1Xp1ajpxkGTf3g&w=700"
-                />
-
-                <div class="relative pt-1">
-                  <p
-                    class="text-_step_2 text-zinc-900 group-hover:underline group-hover:underline-offset-4"
+                <div
+                  class="swiper-button swiper-next-button sm:w-6 sm:h-6 rounded-full border border-stone-800 flex justify-center"
+                >
+                  <svg
+                    class="w-4 sm:w-5"
+                    fill="none"
+                    stroke="black"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    Beach Read
-                  </p>
-                  <p class="mt-1 text-_step_3 text-zinc-700">Emily Henry</p>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    ></path>
+                  </svg>
                 </div>
-              </a>
-
-              <a
-                href="#"
-                class="relative h-full bg-[#F3F2EC] px-7 py-4 mb-2 rounded-sm"
-              >
-                <img
-                  loading="lazy"
-                  alt=""
-                  class="object-cover h-32 sm:h-48 w-full"
-                  src="https://books.google.com/books/publisher/content?id=wIhhDwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U3f-Kun1XN62J0v1Xp1ajpxkGTf3g&w=700"
-                />
-
-                <div class="relative pt-1">
-                  <p
-                    class="text-_step_2 text-zinc-900 group-hover:underline group-hover:underline-offset-4"
-                  >
-                    Beach Read
-                  </p>
-                  <p class="mt-1 text-_step_3 text-zinc-700">Emily Henry</p>
-                </div>
-              </a>
-
-              <a
-                href="#"
-                class="relative bg-[#F3F2EC] px-7 py-4 mb-2 rounded-sm"
-              >
-                <img
-                  loading="lazy"
-                  alt=""
-                  class="object-cover h-32 sm:h-48 w-full"
-                  src="https://books.google.com/books/publisher/content?id=wIhhDwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U3f-Kun1XN62J0v1Xp1ajpxkGTf3g&w=700"
-                />
-
-                <div class="relative pt-1">
-                  <p
-                    class="text-_step_2 text-zinc-900 group-hover:underline group-hover:underline-offset-4"
-                  >
-                    Beach Read
-                  </p>
-                  <p class="mt-1 text-_step_3 text-zinc-700">Emily Henry</p>
-                </div>
-              </a>
+              </div>
             </div>
           </div>
         </div>
